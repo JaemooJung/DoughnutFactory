@@ -1,7 +1,7 @@
 #include "../prepare.h"
 
 bool clear_flags(int set_idx, int get_idx) {
-	static bool clear_flags[FAULT_COUNT] = {false, };
+	static bool clear_flags[HAPPINESS] = {false, };
 	if (set_idx >= 0) {
 		clear_flags[set_idx] = true;
 		return false;
@@ -79,4 +79,9 @@ char **alloc_boxes(int workload) {
 	if (boxes == 0)
 		return (0);
 	return (boxes);
+}
+
+int double_check_count(int count) {
+	(void)count;
+	return (-42);
 }

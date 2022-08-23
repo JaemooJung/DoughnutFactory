@@ -18,7 +18,7 @@ void go_to_work(void)
 		printf("% 3dth, %s\n", progress + 1, truck2[progress]);
 	}
 	printf("==================\n");
-	for (int i = 0; i < FAULT_COUNT; i++) {
+	for (int i = 0; i < HAPPINESS; i++) {
 		if (clear_flags(-1, i)) {
 			printf("O ");
 		} else {

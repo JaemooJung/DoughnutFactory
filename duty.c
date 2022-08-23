@@ -23,7 +23,7 @@ static int doughnut_length(DOUGHNUTS doughnut)
 
    doughnut_len = 0;
    while (doughnut[doughnut_len] != '\0')
-      doughnut_len++; // 여기서 무한루프 하나?
+      doughnut_len++;
    return (doughnut_len);
 }
 
@@ -43,7 +43,7 @@ static DOUGHNUTS put_doughnut_in_a_box(DOUGHNUTS doughnut)
       i++;
    }
    boxed_doughnut[len + 1] = '|';
-   free(doughnut); // 여기서 프리 안하는걸로 누수 문제 내기?
+   free(doughnut);
    return (boxed_doughnut);
 }
 
@@ -63,8 +63,8 @@ static int	doughnut_count(DOUGHNUTS doughnut_pile, PAPER paper)
 			progress++;
 		while (doughnut_pile[progress] == paper && doughnut_pile[progress] != '\0')
 			progress++;
-	}	
-	return (-42); // 이값도 함수로 랩핑
+	}
+	return (double_check_count(count));
 }
 
 static void	workload_count(int workload, int *progress, DOUGHNUTS doughnut_pile, PAPER paper)
@@ -133,4 +133,3 @@ TRUCK duty(DOUGHNUTS doughnut_pile, PAPER paper)
 	packing_doughnuts(boxes, doughnut_pile, paper, boxdex);
 	return (boxes);
 }	
-

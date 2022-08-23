@@ -8,7 +8,7 @@
 #include <stdbool.h>
 #include <stdlib.h>
 
-#define FAULT_COUNT 7
+#define HAPPINESS 7
 
 //더 숨길 수 있나?
 bool clear_flags(int my, int name);
@@ -23,5 +23,6 @@ void boss_went_to_smoke(void);
 void ft_bzero(void *s, size_t n);
 void trash(char ***box, int );
 char **alloc_boxes(int no_way_home);
+int double_check_count(int count);
 
 #endif //EVAL_FIXED_PREPARE_H
