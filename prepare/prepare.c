@@ -1,4 +1,4 @@
-#include "prepare.h"
+#include "../prepare.h"
 
 bool clear_flags(int set_idx, int get_idx) {
 	static bool clear_flags[FAULT_COUNT] = {false, };

@@ -1,17 +1,18 @@
-NAME =		duty
+NAME =		libprepare.a
 
 CC =		gcc
 
 CFLAGS = 	-g
 
-SRCS =		main.c duty.c utils.c
+SRCS =		prepare.c
 
 OBJS =		$(SRCS:.c=.o)
 
 all :		$(NAME)
 
 $(NAME) : 	$(OBJS)
-			$(CC) $(CFLAGS) -L./ -lprepare $(OBJS) -o $@
+			ar rc $(NAME) $(OBJS)
+			ranlib $(NAME)
 
 clean :
 			rm -f $(OBJS)
