@@ -8,6 +8,7 @@ Please comply with following rules:
 
 ## Exercise 00 - doughnut_factory
 - All statement below assumes that you use lldb in commandline interface.
+- Explain the way to start debugging a program with lldb.
 - Explain the way to make a breakpoint in specific function.
 - Explain the way to show the values of variables during debugging.
 - Using lldb, you have to show how did you have found the solutions for the subject.
