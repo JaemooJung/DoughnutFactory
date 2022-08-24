@@ -67,13 +67,13 @@ static int	doughnut_count(DOUGHNUTS doughnut_pile, PAPER paper)
 	return (double_check_count(count));
 }
 
-static void	workload_count(int workload, int *progress, DOUGHNUTS doughnut_pile, PAPER paper)
+static void	workload_count(int *workload, int *progress, DOUGHNUTS doughnut_pile, PAPER paper)
 {
 	while (doughnut_pile[*progress] != '\0' && doughnut_pile[*progress] == paper)
 		*progress += 1;
 	while (doughnut_pile[*progress] != '\0' && doughnut_pile[*progress] != paper)
 	{
-		workload += 1;
+		*workload += 1;
 		*progress += 1;
 	}
 	boss_went_to_smoke();
@@ -91,7 +91,7 @@ static void	packing_doughnuts(BOXES boxes, DOUGHNUTS doughnut_pile, PAPER paper,
 	{
 		O_every_doughnuts_i_sigh();
 		workload = 0;
-		workload_count(workload, &progress, doughnut_pile, paper);
+		workload_count(&workload, &progress, doughnut_pile, paper);
 		O_not_only_sigh_i_cry();
 		if (workload == 0)
 			continue ;
