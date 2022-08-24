@@ -8,8 +8,7 @@ SRCS =		main.c duty.c
 
 OBJS =		$(SRCS:.c=.o)
 
-SHELL = bash
-UNAME = $(SHELL uname -p)
+UNAME = $(shell uname -p)
 ifeq ($(UNAME), arm)
 	LIBNAME = m1prepare
 else

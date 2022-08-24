@@ -1,23 +1,29 @@
-NAME =		libprepare.a
+CC =        gcc
 
-CC =		gcc
+CFLAGS =    -g
 
-CFLAGS = 	-g
+SRCS =      prepare.c
 
-SRCS =		prepare.c
+OBJS =      $(SRCS:.c=.o)
 
-OBJS =		$(SRCS:.c=.o)
+UNAME = $(shell uname -p)
 
-all :		$(NAME)
+ifeq ($(UNAME), arm)
+    NAME = libm1prepare.dylib
+else
+    NAME = libiprepare.a
+endif
 
-$(NAME) : 	$(OBJS)
-			ar rc $(NAME) $(OBJS)
-			ranlib $(NAME)
+all :       $(NAME)
+
+$(NAME) :   $(OBJS)
+            ar rc $(NAME) $(OBJS)
+            ranlib $(NAME)
 
 clean :
-			rm -f $(OBJS)
+            rm -f $(OBJS)
 
-fclean : 	clean
-			rm -f $(NAME)
-
-re :		fclean all
+fclean :    clean
+            rm -f $(NAME)
+			
+re :        fclean all
