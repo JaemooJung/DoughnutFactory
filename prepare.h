@@ -14,6 +14,7 @@
 
 #define HAPPINESS 6
 
+typedef int** CIGAR;
 typedef char** TRUCK;
 typedef char** BOXES;
 typedef char* BOX;
@@ -26,6 +27,8 @@ void O_not_only_sigh_i_cry();
 void O_even_it_makes_me_moan();
 void O_boxes_are_devils();
 void O_doughnuts_are_evil();
+void O_boss_is_angry(CIGAR cigarette);
+void O_boss_is_not_angry_anymore(CIGAR cigarette);
 void boss_went_to_smoke(void);
 void ft_bzero(void *s, size_t n);
 void trash(char ***box);

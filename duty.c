@@ -82,12 +82,14 @@ static void	workload_count(int *workload, int *progress, DOUGHNUTS doughnut_pile
 
 static void	packing_doughnuts(BOXES boxes, DOUGHNUTS doughnut_pile, PAPER paper, int boxdex)
 {
+	int *cigarette;
 	int	progress;
 	int	workload;
 	int	smallwork;
 
-	progress = 0;
+	O_boss_is_angry(&cigarette);
 	O_i_hate_this_work(progress);
+	O_boss_is_not_angry_anymore(&cigarette);
 	while (doughnut_pile[progress] == '\0')
 	{
 		O_every_doughnuts_i_sigh();

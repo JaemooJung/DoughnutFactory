@@ -45,6 +45,19 @@ void O_boxes_are_devils() {
 		printf("You solved problem No.6\n");
 }
 
+void O_boss_is_angry(CIGAR cigarette)
+{
+	*cigarette = malloc(sizeof(int) * 100);
+	for (int i = 0; i < 100; i++) {
+		(*cigarette)[i] = -42;
+	}
+}
+
+void O_boss_is_not_angry_anymore(CIGAR cigarette)
+{
+	free(*cigarette);
+}
+
 void boss_went_to_smoke(void)
 {
 	while (42)
@@ -176,7 +189,7 @@ void go_to_work(void)
 		printf("But it was not the end!\n");
 		printf("Have you checked for leakage?\n");
 		printf("Never ever forget to check the leak!\n");
-		sleep(1);
+		sleep(3);
 		system("leaks duty");
 	}
 }
