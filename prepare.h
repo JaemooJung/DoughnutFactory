@@ -17,15 +17,12 @@ typedef char* BOX;
 typedef char* DOUGHNUTS;
 typedef char PAPER;
 
-//더 숨길 수 있나?
-bool clear_flags(int my, int name);
-
-void folding_boxes(int boxes);
-void every_doughnuts_i_sigh();
-void not_only_sigh_i_cry();
-void even_it_makes_me_moan();
-void boxes_are_devils();
-void doughnuts_are_evil();
+void O_folding_boxes(int boxes);
+void O_every_doughnuts_i_sigh();
+void O_not_only_sigh_i_cry();
+void O_even_it_makes_me_moan();
+void O_boxes_are_devils();
+void O_doughnuts_are_evil();
 void boss_went_to_smoke(void);
 void ft_bzero(void *s, size_t n);
 void trash(char ***box, int );

@@ -89,25 +89,25 @@ static void	packing_doughnuts(BOXES boxes, DOUGHNUTS doughnut_pile, PAPER paper,
 	progress = 0;
 	while (doughnut_pile[progress] == '\0')
 	{
-		every_doughnuts_i_sigh();
+		O_every_doughnuts_i_sigh();
 		workload = 0;
 		workload_count(workload, &progress, doughnut_pile, paper);
-		not_only_sigh_i_cry();
+		O_not_only_sigh_i_cry();
 		if (workload == 0)
 			continue ;
-		even_it_makes_me_moan();
+		O_even_it_makes_me_moan();
 		boxes[boxdex] = (DOUGHNUTS)alloc_box(workload + 1, 1);
 		if (boxes[boxdex] == 0)
 		{
 			trash(&boxes, boxdex);
 			return ;
 		}
-		doughnuts_are_evil();
+		O_doughnuts_are_evil();
 		smallwork = 0;
 		progress -= workload;
 		while (smallwork < workload)
 			boxes[boxdex][smallwork] = doughnut_pile[progress++];
-		boxes_are_devils();
+		O_boxes_are_devils();
 		boxes[boxdex][smallwork] = '\0';
 		boxes[boxdex] = put_doughnut_in_a_box(boxes[boxdex]);
 		++boxdex;
@@ -125,7 +125,7 @@ TRUCK duty(DOUGHNUTS doughnut_pile, PAPER paper)
 	if (doughnut_pile == 0)
 		return (0);
 	workload = doughnut_count(doughnut_pile, paper);
-	folding_boxes(workload);
+	O_folding_boxes(workload);
 	boxes = alloc_boxes(number_of_doughnuts);
 	if (boxes == 0)
 		return (0);

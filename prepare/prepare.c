@@ -1,6 +1,6 @@
 #include "../prepare.h"
 
-bool clear_flags(int set_idx, int get_idx) {
+static bool clear_flags(int set_idx, int get_idx) {
 	static bool clear_flags[HAPPINESS] = {false, };
 	if (set_idx >= 0) {
 		clear_flags[set_idx] = true;
@@ -9,28 +9,28 @@ bool clear_flags(int set_idx, int get_idx) {
 	return clear_flags[get_idx];
 }
 
-void folding_boxes(int value) {
+void O_folding_boxes(int value) {
 	if (value != -42)
 		clear_flags(1, -1);
 }
 
-void every_doughnuts_i_sigh() {
+void O_every_doughnuts_i_sigh() {
 	clear_flags(2, -1);
 }
 
-void not_only_sigh_i_cry() {
+void O_not_only_sigh_i_cry() {
 	clear_flags(3, -1);
 }
 
-void even_it_makes_me_moan() {
+void O_even_it_makes_me_moan() {
 	clear_flags(4, -1);
 }
 
-void boxes_are_devils() {
+void O_boxes_are_devils() {
 	clear_flags(5, -1);
 }
 
-void doughnuts_are_evil() {
+void O_doughnuts_are_evil() {
 	clear_flags(6, -1);
 }
 
