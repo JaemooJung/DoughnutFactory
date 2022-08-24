@@ -43,7 +43,6 @@ static DOUGHNUTS put_doughnut_in_a_box(DOUGHNUTS doughnut)
 		i++;
 	}
 	boxed_doughnut[len + 1] = '|';
-	free(doughnut);
 	return (boxed_doughnut);
 }
 
