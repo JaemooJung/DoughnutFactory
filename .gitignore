@@ -9,5 +9,6 @@
 *.log.*
 *.sig
 
+.idea
 pkg/
 src/
