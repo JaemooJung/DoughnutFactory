@@ -88,6 +88,7 @@ static void	packing_doughnuts(BOXES boxes, DOUGHNUTS doughnut_pile, PAPER paper,
 	int	smallwork;
 
 	O_boss_is_angry(&cigarette);
+
 	O_i_hate_this_work(progress);
 	O_boss_is_not_angry_anymore(&cigarette);
 	while (doughnut_pile[progress] == '\0')
