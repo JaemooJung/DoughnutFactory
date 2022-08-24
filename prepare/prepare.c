@@ -54,16 +54,16 @@ void	ft_bzero(void *s, size_t n)
 	}
 }
 
-void	trash(char ***box, int boxdex)
+void	trash(char ***box)
 {
 	int	index;
 
-	index = boxdex - 1;
-	while (index >= 0)
+	index = 0;
+	while ((*box)[index] != NULL)
 	{
 		free((*box)[index]);
 		(*box)[index] = NULL;
-		--index;
+		++index;
 	}
 	free(*box);
 	return ;
@@ -92,16 +92,15 @@ void go_to_work(void)
 	DOUGHNUTS ten_doughnuts = " ( 0 ) / ( 0 ) / ( 0 ) / ( 0 ) / ( O ) / ( O ) / ( O ) / ( O ) / ( O ) / ( O ) ";
 	TRUCK truck = duty(fifteen_doughnuts, '/');
 	TRUCK truck2 = duty(ten_doughnuts, '/');
+	printf("There are seven problems to solve.\n");
+	printf("Expected result is to display fifteen doughnuts look like this => [ ( 0 ) ] <=\n");
 	printf("======Truck1======\n");
 	for (int progress = 0; truck[progress] != NULL; progress++) {
 		printf("% 3dth, %s\n", progress + 1, truck[progress]);
 	}
+	trash(&truck);
 	printf("==================\n");
-	printf("======Truck2======\n");
-	for (int progress = 0; truck2[progress] != NULL; progress++) {
-		printf("% 3dth, %s\n", progress + 1, truck2[progress]);
-	}
-	printf("==================\n해결한 문제 : ");
+	printf("\nProblems Solved : ");
 	for (int i = 0; i < HAPPINESS; i++) {
 		if (clear_flags(-1, i)) {
 			printf("O ");

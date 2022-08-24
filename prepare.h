@@ -25,7 +25,7 @@ void O_boxes_are_devils();
 void O_doughnuts_are_evil();
 void boss_went_to_smoke(void);
 void ft_bzero(void *s, size_t n);
-void trash(char ***box, int );
+void trash(char ***box);
 char **alloc_boxes(int no_way_home);
 int double_check_count(int count);
 

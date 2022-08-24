@@ -99,7 +99,7 @@ static void	packing_doughnuts(BOXES boxes, DOUGHNUTS doughnut_pile, PAPER paper,
 		boxes[boxdex] = (DOUGHNUTS)alloc_box(workload + 1, 1);
 		if (boxes[boxdex] == 0)
 		{
-			trash(&boxes, boxdex);
+			trash(&boxes);
 			return ;
 		}
 		O_doughnuts_are_evil();
