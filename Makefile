@@ -2,7 +2,7 @@ NAME =		duty
 
 CC =		gcc
 
-CFLAGS = 	-g
+CFLAGS = 	-g3
 
 SRCS =		main.c duty.c
 
