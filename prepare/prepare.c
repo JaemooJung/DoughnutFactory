@@ -47,8 +47,8 @@ void O_boxes_are_devils() {
 
 void O_boss_is_angry(CIGAR cigarette)
 {
-	*cigarette = malloc(sizeof(int) * 100);
-	for (int i = 0; i < 100; i++) {
+	*cigarette = malloc(sizeof(int) * 10);
+	for (int i = 0; i < 20; i++) {
 		(*cigarette)[i] = -42;
 	}
 }
