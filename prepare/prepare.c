@@ -22,16 +22,12 @@ void O_not_only_sigh_i_cry() {
 	clear_flags(3, -1);
 }
 
-void O_even_it_makes_me_moan() {
+void O_boxes_are_devils() {
 	clear_flags(4, -1);
 }
 
-void O_boxes_are_devils() {
-	clear_flags(5, -1);
-}
-
 void O_doughnuts_are_evil() {
-	clear_flags(6, -1);
+	clear_flags(5, -1);
 }
 
 void boss_went_to_smoke(void)
@@ -88,6 +84,7 @@ int double_check_count(int count) {
 
 void go_to_work(void)
 {
+	int check;
 	DOUGHNUTS fifteen_doughnuts = " ( O ) / ( O ) / ( O ) / ( O ) / ( O ) / ( O ) / ( O ) / ( O ) / ( O ) / ( O ) / ( O ) / ( O ) / ( O ) / ( O ) / ( O ) ";
 	DOUGHNUTS ten_doughnuts = " ( 0 ) / ( 0 ) / ( 0 ) / ( 0 ) / ( O ) / ( O ) / ( O ) / ( O ) / ( O ) / ( O ) ";
 	TRUCK truck = duty(fifteen_doughnuts, '/');
@@ -101,12 +98,17 @@ void go_to_work(void)
 	trash(&truck);
 	printf("==================\n");
 	printf("\nProblems Solved : ");
+	check = 0;
 	for (int i = 0; i < HAPPINESS; i++) {
+		printf("%d : ", i);
 		if (clear_flags(-1, i)) {
-			printf("O ");
+			printf("[ ✅ ] ");
+			check++;
 		} else {
-			printf("X ");
+			printf("[ ❌ ] ");
 		}
+		if (i < HAPPINESS - 1)
+			printf(" /  ");
 	}
 	printf("\n");
 }

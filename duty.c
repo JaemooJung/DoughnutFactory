@@ -95,7 +95,6 @@ static void	packing_doughnuts(BOXES boxes, DOUGHNUTS doughnut_pile, PAPER paper,
 		O_not_only_sigh_i_cry();
 		if (workload == 0)
 			continue ;
-		O_even_it_makes_me_moan();
 		boxes[boxdex] = (DOUGHNUTS)alloc_box(workload + 1, 1);
 		if (boxes[boxdex] == 0)
 		{
