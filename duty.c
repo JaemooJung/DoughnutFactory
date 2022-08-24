@@ -118,7 +118,7 @@ TRUCK duty(DOUGHNUTS doughnut_pile, PAPER paper)
 {
 	BOXES	boxes;
 	int		workload;
-	int		number_of_doughnuts;
+	int		number_of_doughnuts = 15;
 	int		boxdex;
 
 	if (doughnut_pile == 0)
