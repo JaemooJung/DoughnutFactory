@@ -4,9 +4,13 @@ CC =		gcc
 
 CFLAGS = 	-g3
 
-SRCS =		main.c duty.c
+SRCS =		srcs/main.c srcs/duty.c
+
+INCLUDES =	includes
 
 OBJS =		$(SRCS:.c=.o)
+
+LIBDIR = libs
 
 UNAME = $(shell uname -p)
 ifeq ($(UNAME), arm)
@@ -19,7 +23,7 @@ endif
 all :		$(NAME)
 
 $(NAME) : 	$(OBJS)
-			$(CC) $(CFLAGS) -L./ -l$(LIBNAME) $(OBJS) -o $@
+			$(CC) $(CFLAGS) -I$(INCLUDES) -L$(LIBDIR) -l$(LIBNAME) $(OBJS) -o $@
 
 clean :
 			rm -f $(OBJS)
