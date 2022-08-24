@@ -1,6 +1,6 @@
 CC =        gcc
 
-CFLAGS =    -g
+CFLAGS =    -g3
 
 SRCS =      prepare.c
 
