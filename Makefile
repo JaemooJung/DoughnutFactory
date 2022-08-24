@@ -22,6 +22,9 @@ endif
 
 all :		$(NAME)
 
+.c.o :
+		$(CC) $(CFLAGS) -c $< -o $@ -I$(INCLUDES)
+
 $(NAME) : 	$(OBJS)
 			$(CC) $(CFLAGS) -I$(INCLUDES) -L$(LIBDIR) -l$(LIBNAME) $(OBJS) -o $@
 
