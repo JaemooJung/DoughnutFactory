@@ -4,14 +4,23 @@ CC =		gcc
 
 CFLAGS = 	-g
 
-SRCS =		main.c duty.c utils.c
+SRCS =		main.c duty.c
 
 OBJS =		$(SRCS:.c=.o)
+
+SHELL = bash
+UNAME = $(SHELL uname -p)
+ifeq ($(UNAME), arm)
+	LIBNAME = m1prepare
+else
+	LIBNAME = iprepare
+endif
+
 
 all :		$(NAME)
 
 $(NAME) : 	$(OBJS)
-			$(CC) $(CFLAGS) -L./ -lprepare $(OBJS) -o $@
+			$(CC) $(CFLAGS) -L./ -l$(LIBNAME) $(OBJS) -o $@
 
 clean :
 			rm -f $(OBJS)

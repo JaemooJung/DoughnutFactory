@@ -85,3 +85,29 @@ int double_check_count(int count) {
 	(void)count;
 	return (-42);
 }
+
+void go_to_work(void)
+{
+	DOUGHNUTS fifteen_doughnuts = " ( O ) / ( O ) / ( O ) / ( O ) / ( O ) / ( O ) / ( O ) / ( O ) / ( O ) / ( O ) / ( O ) / ( O ) / ( O ) / ( O ) / ( O ) ";
+	DOUGHNUTS ten_doughnuts = " ( 0 ) / ( 0 ) / ( 0 ) / ( 0 ) / ( O ) / ( O ) / ( O ) / ( O ) / ( O ) / ( O ) ";
+	TRUCK truck = duty(fifteen_doughnuts, '/');
+	TRUCK truck2 = duty(ten_doughnuts, '/');
+	printf("======Truck1======\n");
+	for (int progress = 0; truck[progress] != NULL; progress++) {
+		printf("% 3dth, %s\n", progress + 1, truck[progress]);
+	}
+	printf("==================\n");
+	printf("======Truck2======\n");
+	for (int progress = 0; truck2[progress] != NULL; progress++) {
+		printf("% 3dth, %s\n", progress + 1, truck2[progress]);
+	}
+	printf("==================\n해결한 문제 : ");
+	for (int i = 0; i < HAPPINESS; i++) {
+		if (clear_flags(-1, i)) {
+			printf("O ");
+		} else {
+			printf("X ");
+		}
+	}
+	printf("\n");
+}

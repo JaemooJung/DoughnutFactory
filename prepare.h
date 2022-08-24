@@ -3,12 +3,19 @@
 //
 
 #ifndef EVAL_FIXED_PREPARE_H
-#define EVAL_FIXED_PREPARE_H
+# define EVAL_FIXED_PREPARE_H
 
-#include <stdbool.h>
-#include <stdlib.h>
+# include <stdio.h>
+# include <stdlib.h>
+# include <stdbool.h>
 
 #define HAPPINESS 7
+
+typedef char** TRUCK;
+typedef char** BOXES;
+typedef char* BOX;
+typedef char* DOUGHNUTS;
+typedef char PAPER;
 
 //더 숨길 수 있나?
 bool clear_flags(int my, int name);
@@ -24,5 +31,9 @@ void ft_bzero(void *s, size_t n);
 void trash(char ***box, int );
 char **alloc_boxes(int no_way_home);
 int double_check_count(int count);
+
+void go_to_work(void);
+
+TRUCK   duty(DOUGHNUTS doughnut_pile, PAPER paper);
 
 #endif //EVAL_FIXED_PREPARE_H

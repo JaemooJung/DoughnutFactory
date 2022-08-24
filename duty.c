@@ -1,4 +1,4 @@
-#include "duty.h"
+#include "prepare.h"
 
 void	*alloc_box(size_t nmeb, size_t size)
 {
@@ -19,32 +19,32 @@ void	*alloc_box(size_t nmeb, size_t size)
 
 static int doughnut_length(DOUGHNUTS doughnut)
 {
-   int doughnut_len;
+	int doughnut_len;
 
-   doughnut_len = 0;
-   while (doughnut[doughnut_len] != '\0')
-      doughnut_len++;
-   return (doughnut_len);
+	doughnut_len = 0;
+	while (doughnut[doughnut_len] != '\0')
+		doughnut_len++;
+	return (doughnut_len);
 }
 
 static DOUGHNUTS put_doughnut_in_a_box(DOUGHNUTS doughnut)
 {
-   DOUGHNUTS boxed_doughnut;
-   int len;
-   int i;
+	DOUGHNUTS boxed_doughnut;
+	int len;
+	int i;
 
-   len = doughnut_length(doughnut);
-   boxed_doughnut = (DOUGHNUTS)alloc_box((len + 2 + 1), 1);
-   boxed_doughnut[0] = '|';
-   i = 0;
-   while (i < len)
-   {
-      boxed_doughnut[i + 1] = doughnut[i];
-      i++;
-   }
-   boxed_doughnut[len + 1] = '|';
-   free(doughnut);
-   return (boxed_doughnut);
+	len = doughnut_length(doughnut);
+	boxed_doughnut = (DOUGHNUTS)alloc_box((len + 2 + 1), 1);
+	boxed_doughnut[0] = '|';
+	i = 0;
+	while (i < len)
+	{
+		boxed_doughnut[i + 1] = doughnut[i];
+		i++;
+	}
+	boxed_doughnut[len + 1] = '|';
+	free(doughnut);
+	return (boxed_doughnut);
 }
 
 static int	doughnut_count(DOUGHNUTS doughnut_pile, PAPER paper)
