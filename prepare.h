@@ -18,6 +18,7 @@ typedef char* DOUGHNUTS;
 typedef char PAPER;
 
 void O_folding_boxes(int boxes);
+void O_i_hate_work(int progress);
 void O_every_doughnuts_i_sigh();
 void O_not_only_sigh_i_cry();
 void O_even_it_makes_me_moan();
