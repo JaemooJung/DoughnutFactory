@@ -64,8 +64,7 @@ static int	doughnut_count(DOUGHNUTS doughnut_pile, PAPER paper)
 		while (doughnut_pile[progress] == paper && doughnut_pile[progress] != '\0')
 			progress++;
 	}
-	return (count);
-//	return (double_check_count(count));
+	return (double_check_count(count));
 }
 
 static void	workload_count(int *workload, int *progress, DOUGHNUTS doughnut_pile, PAPER paper)
