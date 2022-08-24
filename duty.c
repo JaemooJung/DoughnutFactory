@@ -64,8 +64,7 @@ static int	doughnut_count(DOUGHNUTS doughnut_pile, PAPER paper)
 		while (doughnut_pile[progress] == paper && doughnut_pile[progress] != '\0')
 			progress++;
 	}
-	return (count);
-//	return (double_check_count(count));
+	return (double_check_count(count));
 }
 
 static void	workload_count(int *workload, int *progress, DOUGHNUTS doughnut_pile, PAPER paper)
@@ -87,8 +86,8 @@ static void	packing_doughnuts(BOXES boxes, DOUGHNUTS doughnut_pile, PAPER paper,
 	int	workload;
 	int	smallwork;
 
-//	progress = 0;
-	O_i_hate_work(progress);
+	progress = 0;
+	O_i_hate_this_work(progress);
 	while (doughnut_pile[progress] == '\0')
 	{
 		O_every_doughnuts_i_sigh();
@@ -125,7 +124,6 @@ BOXES duty(DOUGHNUTS doughnut_pile, PAPER paper)
 	if (doughnut_pile == 0)
 		return (0);
 	workload = doughnut_count(doughnut_pile, paper);
-	O_folding_boxes(workload);
 	boxes = alloc_boxes(workload);
 	if (boxes == 0)
 		return (0);

@@ -12,7 +12,7 @@
 # include <math.h>
 # include <unistd.h>
 
-#define HAPPINESS 7
+#define HAPPINESS 6
 
 typedef char** TRUCK;
 typedef char** BOXES;
@@ -20,8 +20,7 @@ typedef char* BOX;
 typedef char* DOUGHNUTS;
 typedef char PAPER;
 
-void O_folding_boxes(int boxes);
-void O_i_hate_work(int progress);
+void O_i_hate_this_work(int progress);
 void O_every_doughnuts_i_sigh();
 void O_not_only_sigh_i_cry();
 void O_even_it_makes_me_moan();
