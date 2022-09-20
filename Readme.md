@@ -1,8 +1,6 @@
 # Welcome to the Doughnut Factory.
 
-##### 2022 42Seoul Eduthon
-###### Made my jaemjung, hakim, daekim
-
+### 2022 42Seoul Eduthon
 
 #### !! Please read the subject document before start. !!
 
@@ -18,5 +16,6 @@ make
 Good luck!
 
 
+###### Made my jaemjung, hakim, daekim of 42Seoul
 
 
