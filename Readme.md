@@ -13,7 +13,7 @@
 ### you can start the exercise by cloning this repository and run make.
 
 ```
-git clone https://github.com/JaemooJung/42Eduthon
+git clone https://github.com/JaemooJung/DoughnutFactory
 ```
 ```
 make
