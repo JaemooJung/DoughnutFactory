@@ -4,6 +4,8 @@
 
 #### !! Please read the subject document before start !!
 
+![homer](assets/main_image.png)
+
 you can start the exercise by cloning this repository and run make.
 
 ```
