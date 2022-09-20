@@ -19,6 +19,8 @@ git clone https://github.com/JaemooJung/42Eduthon
 make
 ```
 
+then run executable `duty`.
+
 ### Good luck!
 
 
