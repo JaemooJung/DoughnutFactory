@@ -1,6 +1,6 @@
 # Welcome to the Doughnut Factory.
 
-### 2nd place in 2022 42Seoul Eduthon
+### 2nd place winner of 2022 42Seoul Eduthon
 
 #### !! Please read the subject document before start !!
 
