@@ -1,8 +1,8 @@
 # Welcome to the Doughnut Factory.
 
-### 2022 42Seoul Eduthon
+### 2nd place in 2022 42Seoul Eduthon
 
-#### !! Please read the subject document before start. !!
+#### !! Please read the subject document before start !!
 
 you can start the exercise by cloning this repository and run make.
 
