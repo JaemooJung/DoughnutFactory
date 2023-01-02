@@ -24,6 +24,6 @@ then run executable `duty`.
 ### Good luck!
 
 
-###### Made my jaemjung, hakim, daekim of 42Seoul
+###### Made by jaemjung, hakim, daekim of 42Seoul
 
 
